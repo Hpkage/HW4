@@ -14,6 +14,9 @@ void crud() {
     string fullbook;
     vector<string> bookarray;
     cin >> choice;
-    
+
+    if (choice == 'f') {
+        printf("Terminating the program...");
+    }
     return;
 }
