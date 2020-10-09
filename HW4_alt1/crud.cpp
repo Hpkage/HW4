@@ -6,18 +6,13 @@
 
 using namespace std;
 
-void crud(char& choice) {
+void crud(char choice) {
     string bookname;
     string removebook;
     int countnum;
     string authorname;
     string fullbook;
     vector<string> bookarray;
-
-    if (choice == 'f') {
-       cout << "Terminating the program...";
-    }
-    else {
         if (choice == 'a') {
             cout << "please enter name of book: ";
             cin >> bookname;
@@ -57,6 +52,5 @@ void crud(char& choice) {
             }
             cout << " " << endl;
         }
-    }
     return;
 }

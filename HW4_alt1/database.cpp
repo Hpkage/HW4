@@ -11,6 +11,13 @@ using namespace std;
 
 int main() {
 	char choice;
+	string bookname;
+	string removebook;
+	int countnum;
+	string authorname;
+	string fullbook;
+	vector<string> bookarray;
+
 	cout << "Welcome to the database." << endl;
 	cout << " a. Add a book" << endl;
 	cout << " b. Remove a book" << endl;
@@ -24,8 +31,9 @@ int main() {
 			crud(choice);
 		}
 		else {
+			cout << "Terminating the program..." << endl;
 			break;
 		}
-	}while (choice != 'f');
+	}
 	return 0;
 }
