@@ -41,6 +41,15 @@ void crud() {
             cout << "book has been removed" << endl;
             cout << " " << endl;
         }
+        else if (choice == 'c') {
+            bookarray.clear();
+            cout << "Database cleared" << endl;
+            cout << " " << endl;
+        }
+        else if (choice == 'd') {
+            countnum = bookarray.size();
+            cout << "number of books in array:" << countnum << endl;
+        }
     }
     return;
 }
