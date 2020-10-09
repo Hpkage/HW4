@@ -1,28 +1,27 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
-#include<array>
+#include <array>
 #include "database.h"
 
 using namespace std;
 
-void crud(char choice) {
+void crud(char& choice) {
     string bookname;
     string removebook;
     int countnum;
     string authorname;
     string fullbook;
     vector<string> bookarray;
-    cin >> choice;
 
     if (choice == 'f') {
-        printf("Terminating the program...");
+       cout << "Terminating the program...";
     }
     else {
         if (choice == 'a') {
             cout << "please enter name of book: ";
             cin >> bookname;
-            cout << "please enter author name :";
+            cout << "please enter author name: ";
             cin >> authorname;
             fullbook = bookname + " " + authorname;
             bookarray.push_back(fullbook);
@@ -48,7 +47,7 @@ void crud(char choice) {
         }
         else if (choice == 'd') {
             countnum = bookarray.size();
-            cout << "number of books in array:" << countnum << endl;
+            cout << "number of books in array: " << countnum << endl;
         }
         else if (choice == 'e') {
             cout << "name of books in array " << endl;
@@ -58,7 +57,6 @@ void crud(char choice) {
             }
             cout << " " << endl;
         }
-    } while (choice != 'f');
-
+    }
     return;
 }
