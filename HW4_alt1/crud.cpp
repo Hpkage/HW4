@@ -28,6 +28,19 @@ void crud() {
             bookarray.push_back(fullbook);
             cout << "Book has been added" << endl;
         }
+        else if (choice == 'b') {
+            cout << "Please enter book number to delete: ";
+            cin >> removebook;
+            for (int i = 0; i < bookarray.size(); i++) {
+                if (bookarray[i].find(removebook) != std::string::npos) {
+                    bookarray.erase(bookarray.begin() + i);
+                    break;
+                }
+            }
+            cout << " " << endl;
+            cout << "book has been removed" << endl;
+            cout << " " << endl;
+        }
     }
     return;
 }
