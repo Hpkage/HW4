@@ -58,6 +58,7 @@ void crud() {
             }
             cout << " " << endl;
         }
-    }
+    } while (choice != 'f');
+
     return;
 }
