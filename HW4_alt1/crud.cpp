@@ -50,6 +50,14 @@ void crud() {
             countnum = bookarray.size();
             cout << "number of books in array:" << countnum << endl;
         }
+        else if (choice == 'e') {
+            cout << "name of books in array " << endl;
+            for (int i = 0; i < bookarray.size(); i++) {
+                cout << i << " " << bookarray[i] << " " << endl; ;
+
+            }
+            cout << " " << endl;
+        }
     }
     return;
 }
