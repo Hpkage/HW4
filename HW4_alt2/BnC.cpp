@@ -43,3 +43,25 @@ int count_bulls(string secret_string, string guess_string, bool secret_digit_use
     }
     return count;
 }
+
+int count_cows(string secret_string, string guess_string, bool secret_digit_used[], bool guess_digit_used[]) {
+    int count = 0;
+
+    // Iterate over all possible position pairs and increase count if digits are equal
+    for (int i = 0; i < 4; i++) {
+        for (int j = 0; j < 4; j++) {
+
+            // Don't use an alredy used digit
+            if (secret_digit_used[i] || guess_digit_used[j])
+                continue;
+            if (secret_string[i] == guess_string[j]) {
+                count++;
+
+                // Mark digits used
+                secret_digit_used[i] = true;
+                guess_digit_used[j] = true;
+            }
+        }
+    }
+    return count;
+}
