@@ -71,6 +71,17 @@ int main() {
     // Generate secret number
     string secret_string = generate_secret_number();
     cout << "Secret number chosen (between 1000 and 9999)." << endl;
- 
+    // cout << secret_string << endl; // For debugging ...
+
+    cout << "Start guessing! ... " << endl;
+    int nturns = 0;
+    while (true) {
+
+        // Input guess number
+        string guess_string = get_user_input();
+        nturns++;
+
+    }
+
     return 0;
 }
