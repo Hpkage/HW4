@@ -15,3 +15,12 @@ bool readLine(string& str) {
 		return true;
 	}
 }
+
+unsigned stringToTokensWS(const string& input, vector<string>& tokens) {
+	for (int i = 0; i < tokens.size(); i++) {
+		istringstream instream(tokens[i]);
+		int value;
+		instream >> value;
+	}
+	return 0;
+}
