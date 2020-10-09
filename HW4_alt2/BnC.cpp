@@ -85,6 +85,17 @@ int main() {
         bool secret_digit_used[4] = { false, false, false, false };
         bool guess_digit_used[4] = { false, false, false, false };
 
+        // Count bulls
+        int bulls = count_bulls(secret_string, guess_string, secret_digit_used, guess_digit_used);
+
+        // Check if guess is correct
+        if (bulls == 4) {
+            cout << "Congratulations, you did it!" << endl;
+            cout << "You took " << nturns << " to guess the number" << endl;
+
+            break;
+        }
+
     }
 
     return 0;
