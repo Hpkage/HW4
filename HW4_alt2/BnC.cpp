@@ -27,3 +27,19 @@ string get_user_input() {
     }
     return to_string(guess);
 }
+
+int count_bulls(string secret_string, string guess_string, bool secret_digit_used[], bool guess_digit_used[]) {
+    int count = 0;
+
+    // Iterate over the 4 digits and count the number of equal digits
+    for (int i = 0; i < 4; i++) {
+        if (secret_string[i] == guess_string[i]) {
+            count++;
+
+            // Mark digits used
+            secret_digit_used[i] = true;
+            guess_digit_used[i] = true;
+        }
+    }
+    return count;
+}
