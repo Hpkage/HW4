@@ -18,5 +18,16 @@ void crud() {
     if (choice == 'f') {
         printf("Terminating the program...");
     }
+    else {
+        if (choice == 'a') {
+            cout << "please enter name of book: ";
+            cin >> bookname;
+            cout << "please enter author name :";
+            cin >> authorname;
+            fullbook = bookname + " " + authorname;
+            bookarray.push_back(fullbook);
+            cout << "Book has been added" << endl;
+        }
+    }
     return;
 }
