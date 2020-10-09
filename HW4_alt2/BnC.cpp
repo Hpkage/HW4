@@ -81,6 +81,10 @@ int main() {
         string guess_string = get_user_input();
         nturns++;
 
+        // For marking which digits have been "used"
+        bool secret_digit_used[4] = { false, false, false, false };
+        bool guess_digit_used[4] = { false, false, false, false };
+
     }
 
     return 0;
