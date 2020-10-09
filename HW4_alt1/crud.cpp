@@ -2,11 +2,11 @@
 #include <vector>
 #include <algorithm>
 #include<array>
+#include "database.h"
 
 using namespace std;
 
-void crud() {
-    char choice;
+void crud(char choice) {
     string bookname;
     string removebook;
     int countnum;
