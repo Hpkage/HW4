@@ -65,3 +65,12 @@ int count_cows(string secret_string, string guess_string, bool secret_digit_used
     }
     return count;
 }
+
+int main() {
+
+    // Generate secret number
+    string secret_string = generate_secret_number();
+    cout << "Secret number chosen (between 1000 and 9999)." << endl;
+ 
+    return 0;
+}
