@@ -91,12 +91,22 @@ int main() {
         // Check if guess is correct
         if (bulls == 4) {
             cout << "Congratulations, you did it!" << endl;
+            cout << endl;
             cout << "You took " << nturns << " to guess the number" << endl;
 
             break;
         }
 
+        // Count cows
+        int cows = count_cows(secret_string, guess_string, secret_digit_used, guess_digit_used);
+
+        // Output the information
+        cout << "Turn " << nturns << ": Your guess " << guess_string << " has " << bulls
+            << " bulls and " << cows << " cows." << endl;
     }
+
+    // Output secret number once game is over
+    cout << "Secret number is " << secret_string << endl;
 
     return 0;
 }
