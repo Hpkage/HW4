@@ -12,11 +12,17 @@ using std::string;
 
 int main() {
 	string str;
-	const string input;
+	string input;
 	vector<string> tokens;
 	cin >> str;
-	readLine(str);
-	stringToTokensWS(input, tokens);
-
+	while (cin >> str) {
+		if (str == "end") {
+			break;
+		}
+		else {
+			readLine(str);
+			stringToTokensWS(str, tokens);
+		}
+	}
 	return 0;
 }

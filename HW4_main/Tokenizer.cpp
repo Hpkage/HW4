@@ -6,23 +6,34 @@
 
 using std::cout;
 using std::cin;
+using std::endl;
+using std::getline;
 using std::vector;
 using std::string;
-using std::getline;
 using std::istringstream;
 
 bool readLine(string& str) {
 	if (getline(cin, str)) {
 		return true;
 	}
-	return 0;
+	else {
+		return false;
+	}
 }
 
-unsigned stringToTokensWS(const string& input, vector<string>& tokens) {
+unsigned stringToTokensWS(const string& str, vector<string>& tokens) {
 	for (int i = 0; i < tokens.size(); i++) {
+		string value;
 		istringstream instream(tokens[i]);
-		int value;
 		instream >> value;
+
+		if (!instream) {
+			cout << "Please, no numbers.";
+		}
+		else {
+			cout << value << endl;
+		}
 	}
 	return 0;
 }
+
