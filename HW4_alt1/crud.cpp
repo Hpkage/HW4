@@ -23,14 +23,15 @@ void Add(char choice, vector<string>& bookarray) {
     return;
 }
 
-void Delete(char choice, string& removebook, vector<string>& bookarray) {
+void Delete(char choice, vector<string>& bookarray) {
+    int removebook;
 
     if (choice == 'b') {
         cout << "Please enter book number to delete: ";
         cin >> removebook;
         for (int i = 0; i < bookarray.size(); i++) {
-            if (bookarray[i].find(removebook) != std::string::npos) {
-                bookarray.erase(bookarray.begin() + i);
+            if (bookarray[i].find(removebook) == string::npos) {
+                bookarray.erase(bookarray.begin() + removebook);
                 break;
             }
         }

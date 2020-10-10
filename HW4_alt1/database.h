@@ -5,7 +5,7 @@
 #include <vector>
 
 void Add(char choice, std::vector<std::string>& bookarray);
-void Delete(char choice, std::string& removebook, std::vector<std::string>& bookarray);
+void Delete(char choice, std::vector<std::string>& bookarray);
 void Clear(char choice, std::vector<std::string>& bookarray);
 void ReadNum(char choice, std::vector<std::string>& bookarray);
 void NameBooks(char choice, std::vector<std::string>& bookarray);
