@@ -23,7 +23,21 @@ int main() {
 
 	while (cin >> choice) {
 		if (choice != 'f') {
-			crud(choice);
+			if (choice == 'a') {
+				Add(choice);
+			}
+			else if (choice == 'b') {
+				Delete(choice);
+			}
+			else if (choice == 'c') {
+				Clear(choice);
+			}
+			else if (choice == 'd') {
+				ReadNum(choice);
+			}
+			else if (choice == 'e') {
+				NameBooks(choice);
+			}
 		}
 		else {
 			cout << "Terminating the program..." << endl;

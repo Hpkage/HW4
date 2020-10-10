@@ -2,6 +2,7 @@
 #include <string>
 #include <vector>
 #include <sstream>
+#include "Tokenizer.h"
 
 using std::cout;
 using std::cin;
@@ -14,6 +15,7 @@ bool readLine(string& str) {
 	if (getline(cin, str)) {
 		return true;
 	}
+	return 0;
 }
 
 unsigned stringToTokensWS(const string& input, vector<string>& tokens) {

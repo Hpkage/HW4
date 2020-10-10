@@ -1,6 +1,13 @@
 #ifndef DATABASE_H
 #define DATABASE_H
 
-void crud(char choice);
+#include <string>
+#include <vector>
+
+void Add(char choice);
+void Delete(char choice);
+void Clear(char choice);
+void ReadNum(char choice);
+void NameBooks(char choice);
 
 #endif DATABASE_H
