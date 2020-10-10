@@ -11,6 +11,8 @@ using namespace std;
 
 int main() {
 	char choice;
+	string removebook;
+	vector<string> bookarray;
 
 	cout << "Welcome to the database." << endl;
 	cout << " a. Add a book" << endl;
@@ -24,19 +26,19 @@ int main() {
 	while (cin >> choice) {
 		if (choice != 'f') {
 			if (choice == 'a') {
-				Add(choice);
+				Add(choice, bookarray);
 			}
 			else if (choice == 'b') {
-				Delete(choice);
+				Delete(choice, removebook, bookarray);
 			}
 			else if (choice == 'c') {
-				Clear(choice);
+				Clear(choice, bookarray);
 			}
 			else if (choice == 'd') {
-				ReadNum(choice);
+				ReadNum(choice, bookarray);
 			}
 			else if (choice == 'e') {
-				NameBooks(choice);
+				NameBooks(choice, bookarray);
 			}
 		}
 		else {

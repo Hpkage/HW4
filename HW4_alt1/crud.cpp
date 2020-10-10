@@ -6,26 +6,25 @@
 
 using namespace std;
 
-void Add(char choice) {
+void Add(char choice, vector<string>& bookarray) {
     string bookname;
     string authorname;
     string fullbook;
-    vector<string> bookarray;
+
         if (choice == 'a') {
-            cout << "please enter name of book: ";
+            cout << "Enter book's name (Please use the '_' character to replace the spacebar): ";
             cin >> bookname;
-            cout << "please enter author name: ";
+            cout << "Enter the author's name (Please use the '_' character to replace the spacebar): ";
             cin >> authorname;
-            fullbook = bookname + " " + authorname;
+            fullbook = bookname + " By: " + authorname;
             bookarray.push_back(fullbook);
             cout << "Book has been added" << endl;
         }
     return;
 }
 
-void Delete(char choice) {
-    string removebook;
-    vector<string> bookarray;
+void Delete(char choice, string& removebook, vector<string>& bookarray) {
+
     if (choice == 'b') {
         cout << "Please enter book number to delete: ";
         cin >> removebook;
@@ -42,8 +41,8 @@ void Delete(char choice) {
     return;
 }
 
-void Clear(char choice) {
-    vector<string> bookarray;
+void Clear(char choice, vector<string>& bookarray) {
+
     if (choice == 'c') {
         bookarray.clear();
         cout << "Database cleared" << endl;
@@ -53,10 +52,10 @@ void Clear(char choice) {
     return;
 }
 
-void ReadNum(char choice) {
+void ReadNum(char choice, vector<string>& bookarray) {
     int countnum;
     string fullbook;
-    vector<string> bookarray;
+
     if (choice == 'd') {
         countnum = bookarray.size();
         cout << "number of books in array: " << countnum << endl;
@@ -64,8 +63,8 @@ void ReadNum(char choice) {
     return;
 }
 
-void NameBooks(char choice) {
-    vector<string> bookarray;
+void NameBooks(char choice, vector<string>& bookarray) {
+
     if (choice == 'e') {
         cout << "name of books in array " << endl;
         for (int i = 0; i < bookarray.size(); i++) {
